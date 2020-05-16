@@ -11,6 +11,8 @@ Plug 'Raimondi/delimitMate'
 Plug 'jeffkreeftmeijer/vim-numbertoggle'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'majutsushi/tagbar'
+Plug 'flazz/vim-colorschemes'
+Plug 'tikhomirov/vim-glsl'
 Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
 
 call plug#end()
@@ -70,7 +72,13 @@ let g:NERDTreeDirArrowExpandable = "+"
 let g:NERDTreeDirArrowCollabsible = "-"
 
 " CtrlP Ignores
-let g:ctrlp_custom_ignore = 'cmake-build'
+let g:ctrlp_custom_ignore = 'build\|.ccls-cache'
+
+" Tagbar
+set statusline+=%{gutentags#statusline()}
+
+nmap <Leader>t :TagbarToggle<CR>
+let g:tagbar_autofocus=1
 
 " CoC Bits
 nmap <Leader>rn <Plug>(coc-refactor)

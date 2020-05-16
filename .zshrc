@@ -89,6 +89,8 @@ source ~/.z-script/z.sh
 # else
 #   export EDITOR='mvim'
 # fi
+#
+path+=('/home/jeffanime/.local/bin')
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -101,3 +103,5 @@ source ~/.z-script/z.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+source ~/Documents/vulkan/1.2.135.0/setup-env.sh
