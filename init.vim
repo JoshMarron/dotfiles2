@@ -13,14 +13,19 @@ Plug 'ludovicchabant/vim-gutentags'
 Plug 'majutsushi/tagbar'
 Plug 'flazz/vim-colorschemes'
 Plug 'tikhomirov/vim-glsl'
+Plug 'sheerun/vim-polyglot'
+Plug 'w0ng/vim-hybrid'
+Plug 'arcticicestudio/nord-vim'
 Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
 
 call plug#end()
 
+set termguicolors
+
 " Appearance
 set background=dark
-colorscheme codedark
-set colorcolumn=80
+colorscheme nord
+set colorcolumn=85
 
 " Basic QoL bits
 let mapleader=","
@@ -72,7 +77,7 @@ let g:NERDTreeDirArrowExpandable = "+"
 let g:NERDTreeDirArrowCollabsible = "-"
 
 " CtrlP Ignores
-let g:ctrlp_custom_ignore = 'build\|.ccls-cache'
+let g:ctrlp_custom_ignore = 'build\|.ccls-cache\|vcpkg'
 
 " Tagbar
 set statusline+=%{gutentags#statusline()}
@@ -84,3 +89,18 @@ let g:tagbar_autofocus=1
 nmap <Leader>rn <Plug>(coc-refactor)
 nmap gd <Plug>(coc-definition)
 nmap gr <Plug>(coc-references)
+
+" Lightline configuration
+let g:lightline = {
+\   'colorscheme': 'nord'
+\}
+
+" clang-format on write!
+function! Formatonsave()
+    let l:formatdiff = 1
+    py3f /usr/share/clang/clang-format.py
+endfunction
+autocmd BufWritePre *.h,*.cc,*.cpp,*.c call Formatonsave()
+
+" clang-format command
+nmap <Leader>f :py3f /usr/share/clang/clang-format.py<CR>

@@ -91,6 +91,7 @@ source ~/.z-script/z.sh
 # fi
 #
 path+=('/home/jeffanime/.local/bin')
+path+=('/home/jeffanime/Documents/balena/balena-cli')
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -105,3 +106,11 @@ path+=('/home/jeffanime/.local/bin')
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 source ~/Documents/vulkan/1.2.135.0/setup-env.sh
+
+export CC=/usr/bin/clang
+export CXX=/usr/bin/clang++
+
+alias qmkload="sudo ./mdloader_linux --first --download qmk_firmware/massdrop_ctrl_jeffanime.bin --restart"
+alias netscan="nmap -sn 192.168.1.0/24"
+
+export JAVA_HOME="/etc/alternatives/java_sdk_11"
