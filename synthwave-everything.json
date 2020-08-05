@@ -1,1 +1,35 @@
-/home/jeffanime/.config/tilix/schemes/synthwave-everything.json
+{
+    "background-color": "#2A2139",
+    "badge-color": "#AC7EA8",
+    "bold-color": "#FFFFFF",
+    "comment": "",
+    "cursor-background-color": "#000000",
+    "cursor-foreground-color": "#FFFFFF",
+    "foreground-color": "#F0EFF1",
+    "highlight-background-color": "#000000",
+    "highlight-foreground-color": "#FFFFFF",
+    "name": "synthwave-everything",
+    "palette": [
+        "#FEFEFE",
+        "#F97E72",
+        "#71F1B7",
+        "#FEDE5D",
+        "#6D76B3",
+        "#C792EA",
+        "#F772E0",
+        "#FEFEFE",
+        "#FEFEFE",
+        "#F88414",
+        "#71F1B7",
+        "#FFF951",
+        "#36F9F6",
+        "#E1ACFF",
+        "#F929AD",
+        "#FEFEFE"
+    ],
+    "use-badge-color": true,
+    "use-bold-color": false,
+    "use-cursor-color": false,
+    "use-highlight-color": false,
+    "use-theme-colors": false
+}
